@@ -25,7 +25,7 @@ export const heroCopy: Record<
   company: {
     eyebrow: "Open to senior DevOps roles",
     headline: ["I build and automate", "scalable cloud infrastructure."],
-    sub: "Senior DevOps Engineer with 4.5 years across AWS and Azure. Terraform, Kubernetes on EKS Fargate, GitOps with ArgoCD and full observability, built to keep production highly available. AWS- and Azure-certified.",
+    sub: "Senior DevOps Engineer with 5.5 years across AWS and Azure. Terraform, Kubernetes on EKS Fargate, GitOps with ArgoCD and full observability, built to keep production highly available. AWS- and Azure-certified.",
     primary: { label: "Download resume", href: profile.resume },
     secondary: { label: "See my experience", href: "#experience" },
   },
@@ -39,7 +39,7 @@ export const heroCopy: Record<
 };
 
 export const stats = [
-  { value: 4.5, suffix: "+", label: "Years in DevOps and cloud" },
+  { value: 5.5, suffix: "+", label: "Years in DevOps and cloud" },
   { value: 30, suffix: "%", label: "Max cloud spend reduction (20-30%)" },
   { value: 40, suffix: "%", label: "Faster deployments via CI/CD" },
   { value: 50, suffix: "%", label: "Higher release frequency" },
@@ -56,8 +56,8 @@ export const about = {
   ],
   facts: [
     { label: "Based in", value: "Noida, India" },
-    { label: "Experience", value: "4.5 years" },
-    { label: "Currently", value: "Astro Arun Pandit" },
+    { label: "Experience", value: "5.5 years" },
+    { label: "Currently", value: "Teamarcs · Livia Health" },
     { label: "Education", value: "MCA, Kurukshetra Univ." },
   ],
 };
@@ -316,7 +316,7 @@ export const experience = [
   {
     role: "Primary DevOps Engineer, Livia Health Kenya",
     company: "Teamarcs Technologies",
-    period: "Current engagement",
+    period: "Present",
     location: "Kenya operations",
     current: true,
     summary:
@@ -334,7 +334,7 @@ export const experience = [
     company: "Astro Arun Pandit Pvt. Ltd.",
     period: "Dec 2025 - Present",
     location: "Noida, India",
-    current: true,
+    current: false,
     summary: "End-to-end DevOps ownership for the Horocosmo application on AWS.",
     points: [
       "Lead end-to-end DevOps operations independently for the Horocosmo application on AWS, owning compute, networking, security, monitoring and cost optimization.",

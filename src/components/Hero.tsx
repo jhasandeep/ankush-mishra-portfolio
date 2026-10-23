@@ -14,7 +14,7 @@ import { TechIcon } from "./TechIcon";
 const stackChips = ["AWS", "Kubernetes", "Terraform", "ArgoCD", "Jenkins", "Docker", "Grafana", "Python"];
 
 const floaters = [
-  { value: "4.5+", label: "years in DevOps", className: "-top-6 right-6", delay: 0 },
+  { value: "5.5+", label: "years in DevOps", className: "-top-6 right-6", delay: 0 },
   { value: "20-30%", label: "cloud spend cut", className: "-bottom-10 right-4", delay: 1.2 },
   { value: "~40%", label: "faster deployments", className: "-bottom-10 left-4", delay: 2.2 },
 ];
@@ -131,9 +131,9 @@ export function Hero() {
 
             <div className="relative mt-6 rounded-xl border border-line bg-soft p-4 font-mono text-[13px] leading-6 text-muted">
               <p><span className="text-accent">const</span> ankush = {"{"}</p>
-              <p className="pl-4">experience: <span className="text-accent2">&quot;4.5 years&quot;</span>,</p>
+              <p className="pl-4">experience: <span className="text-accent2">&quot;5.5 years&quot;</span>,</p>
               <p className="pl-4">focus: <span className="text-accent2">&quot;devops &amp; cloud&quot;</span>,</p>
-              <p className="pl-4">now: <span className="text-accent2">&quot;Horocosmo on AWS&quot;</span>,</p>
+              <p className="pl-4">now: <span className="text-accent2">&quot;Livia Health, Kenya&quot;</span>,</p>
               <p className="pl-4">openTo: [<span className="text-accent2">&quot;full-time&quot;</span>, <span className="text-accent2">&quot;consulting&quot;</span>],</p>
               <p>{"}"}</p>
             </div>

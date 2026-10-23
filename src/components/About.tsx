@@ -96,7 +96,7 @@ function DelhiClock() {
 const script = [
   { cmd: "whoami", out: "ankush-mishra · senior devops engineer" },
   { cmd: "cat stack.txt", out: "aws · kubernetes · terraform · argocd · jenkins · grafana" },
-  { cmd: "uptime", out: "4.5 years automating cloud infra and ci/cd" },
+  { cmd: "uptime", out: "5.5 years automating cloud infra and ci/cd" },
   { cmd: "echo $STATUS", out: "open to senior devops roles and consulting" },
 ];
 
@@ -188,9 +188,9 @@ export function About() {
               <Briefcase size={13} className="text-accent" /> Currently building
             </p>
             <div className="relative">
-              <p className="font-display text-xl font-semibold leading-tight">Horocosmo on AWS</p>
+              <p className="font-display text-xl font-semibold leading-tight">Livia Health, Kenya</p>
               <p className="mt-1 text-xs leading-relaxed text-muted">
-                CI/CD · cost optimization · @ Astro Arun Pandit
+                AWS · POMSF · @ Teamarcs Technologies
               </p>
               <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface2">
                 <div className="h-full w-3/4 animate-pulse rounded-full bg-gradient-to-r from-accent to-accent2" />
