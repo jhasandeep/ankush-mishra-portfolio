@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 const ORBITS = [
-  { r: 62, cls: "spin-slow-rev", counter: "counter-slow-rev", items: ["React", "NestJS", "Next.js"] },
-  { r: 118, cls: "spin-slow", counter: "counter-slow", items: ["Docker", "MySQL", "TypeScript", "MongoDB", "Kubernetes", "Node.js"] },
+  { r: 62, cls: "spin-slow-rev", counter: "counter-slow-rev", items: ["Terraform", "Kubernetes", "ArgoCD"] },
+  { r: 118, cls: "spin-slow", counter: "counter-slow", items: ["Docker", "Jenkins", "Helm", "Prometheus", "Grafana", "GitHub Actions"] },
 ];
 
 // Logos orbiting a glowing core; each logo counter-rotates so it stays upright.
@@ -27,7 +27,7 @@ export function TechOrbit({ className = "", renderIcon }: { className?: string; 
         ))}
       </svg>
       <div className="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-sm font-bold text-ink shadow-lg shadow-accent/40">
-        SJ
+        AM
       </div>
       {ORBITS.map((o) => (
         <div key={o.r} className={`absolute inset-0 ${o.cls}`}>

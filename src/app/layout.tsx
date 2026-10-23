@@ -8,23 +8,23 @@ const space = Space_Grotesk({ variable: "--font-space", subsets: ["latin"] });
 const mono = JetBrains_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sandeep Kumar Jha | Senior Full Stack Developer",
+  title: "Ankush Mishra | Senior DevOps Engineer",
   description:
-    "Senior Full Stack Developer (React, Next.js, NestJS, TypeScript, MySQL) building and modernizing enterprise web and mobile platforms. Available for full-time roles and freelance projects.",
+    "Senior DevOps Engineer (AWS, Kubernetes, Terraform, ArgoCD, Jenkins) building scalable cloud infrastructure and CI/CD pipelines. AWS and Azure certified.",
   keywords: [
-    "Full Stack Developer",
-    "Next.js",
-    "NestJS",
-    "React",
-    "TypeScript",
-    "Freelance developer",
-    "Delhi",
+    "DevOps Engineer",
+    "AWS",
+    "Kubernetes",
+    "Terraform",
+    "CI/CD",
+    "GitOps",
+    "Noida",
   ],
-  authors: [{ name: "Sandeep Kumar Jha" }],
+  authors: [{ name: "Ankush Mishra" }],
   openGraph: {
-    title: "Sandeep Kumar Jha | Senior Full Stack Developer",
+    title: "Ankush Mishra | Senior DevOps Engineer",
     description:
-      "Enterprise web and mobile platforms with React, Next.js and NestJS. Open to full-time roles and freelance work.",
+      "Scalable cloud infrastructure and CI/CD on AWS and Azure. Open to senior DevOps roles and consulting.",
     type: "website",
   },
 };

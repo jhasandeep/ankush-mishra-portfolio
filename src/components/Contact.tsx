@@ -28,7 +28,7 @@ export function Contact() {
     { icon: Mail, label: profile.email, href: `mailto:${profile.email}` },
     { icon: Phone, label: profile.phone, href: profile.phoneHref },
     { icon: LinkedinIcon, label: "LinkedIn", href: profile.linkedin },
-    { icon: GithubIcon, label: "GitHub", href: profile.github },
+    ...(profile.github ? [{ icon: GithubIcon, label: "GitHub", href: profile.github }] : []),
   ];
 
   return (
@@ -47,8 +47,8 @@ export function Contact() {
           </h2>
           <p className="mt-5 max-w-md leading-relaxed text-muted">
             {isCompany
-              ? "I'm open to senior full stack roles. Send a note or grab my resume and I'll get back to you."
-              : "Tell me a bit about what you need: scope, timeline and any existing stack. I'll reply with how I'd approach it."}
+              ? "I'm open to senior DevOps and cloud roles. Send a note or grab my resume and I'll get back to you."
+              : "Tell me a bit about what you need: scope, timeline and your current cloud setup. I'll reply with how I'd approach it."}
           </p>
 
           <ul className="mt-8 space-y-3">
@@ -151,7 +151,7 @@ export function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder={
                   isCompany
-                    ? "Company, role, team size and stack..."
+                    ? "Company, role, team size and cloud stack..."
                     : "What are you building? Timeline and budget range help too."
                 }
                 className="w-full resize-none rounded-xl border border-line bg-bg px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted/60 focus:border-accent"

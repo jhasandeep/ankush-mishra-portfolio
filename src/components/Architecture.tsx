@@ -1,40 +1,40 @@
 "use client";
 
 import { useState } from "react";
-import { Bell, Clock, CreditCard, Database, FileText, Globe, HardDrive, ShieldCheck, Smartphone, Server } from "lucide-react";
+import { Activity, BarChart3, Bell, Boxes, FileText, GitBranch, Layers, ScanSearch, Server, Workflow } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Reveal, SectionHead } from "./Reveal";
 
 type N = { id: string; x: number; y: number; w: number; h: number; title: string; sub?: string; icon: LucideIcon; chips?: string[]; bars?: number };
 
-// Layout follows the Livia platform described in the resume: portals and apps -> edge -> NestJS services -> data and integrations.
+// Layout follows the delivery flow: source -> pipeline -> registry and GitOps -> Kubernetes runtime -> observability.
 const nodes: N[] = [
-  { id: "web", x: 30, y: 100, w: 210, h: 130, title: "Web portals", sub: "Next.js 15 · React 19", icon: Globe, chips: ["Admin", "Doctor", "Patient"] },
-  { id: "mobile", x: 30, y: 300, w: 210, h: 130, title: "Mobile apps", sub: "React Native", icon: Smartphone, chips: ["Patient", "Doctor", "Pharmacy"] },
-  { id: "edge", x: 320, y: 228, w: 180, h: 74, title: "Nginx edge", sub: "JWT · RBAC · ACL", icon: ShieldCheck },
-  { id: "svc", x: 580, y: 95, w: 200, h: 210, title: "NestJS services", sub: "7 microservices", icon: Server, bars: 7 },
-  { id: "sched", x: 580, y: 345, w: 200, h: 70, title: "Scheduler", sub: "25 jobs · distributed locks", icon: Clock },
-  { id: "mysql", x: 850, y: 40, w: 140, h: 66, title: "MySQL", sub: "TypeORM", icon: Database },
-  { id: "s3", x: 850, y: 122, w: 140, h: 66, title: "AWS S3", sub: "presigned URLs", icon: HardDrive },
-  { id: "pay", x: 850, y: 204, w: 140, h: 66, title: "Payments", sub: "M-Pesa · Flutterwave", icon: CreditCard },
-  { id: "ins", x: 850, y: 286, w: 140, h: 66, title: "Insurance APIs", sub: "claims · pre-auth", icon: FileText },
-  { id: "etims", x: 850, y: 368, w: 140, h: 66, title: "KRA eTIMS", sub: "e-invoicing", icon: FileText },
-  { id: "fcm", x: 850, y: 450, w: 140, h: 66, title: "Firebase", sub: "push notifications", icon: Bell },
+  { id: "git", x: 20, y: 70, w: 170, h: 120, title: "Source control", sub: "GitHub · Git", icon: GitBranch, chips: ["PR", "Main"] },
+  { id: "iac", x: 20, y: 250, w: 170, h: 120, title: "Terraform", sub: "Infrastructure as Code", icon: Layers, chips: ["VPC", "EC2"] },
+  { id: "ci", x: 235, y: 70, w: 170, h: 74, title: "CI pipelines", sub: "Actions · Jenkins", icon: Workflow },
+  { id: "scan", x: 235, y: 250, w: 170, h: 74, title: "Quality gates", sub: "SonarQube · Trivy", icon: ScanSearch },
+  { id: "ecr", x: 450, y: 70, w: 170, h: 74, title: "AWS ECR", sub: "image registry", icon: Boxes },
+  { id: "argo", x: 450, y: 250, w: 170, h: 74, title: "ArgoCD", sub: "GitOps · Helm", icon: GitBranch },
+  { id: "eks", x: 665, y: 100, w: 170, h: 210, title: "EKS Fargate", sub: "Kubernetes workloads", icon: Server, bars: 7 },
+  { id: "prom", x: 880, y: 40, w: 170, h: 70, title: "Prometheus", sub: "metrics · alerts", icon: Activity },
+  { id: "graf", x: 880, y: 140, w: 170, h: 70, title: "Grafana", sub: "dashboards", icon: BarChart3 },
+  { id: "loki", x: 880, y: 240, w: 170, h: 70, title: "Loki", sub: "log aggregation", icon: FileText },
+  { id: "cw", x: 880, y: 340, w: 170, h: 70, title: "CloudWatch", sub: "AWS monitoring", icon: Bell },
 ];
 
 const edges: [string, string][] = [
-  ["web", "edge"],
-  ["mobile", "edge"],
-  ["edge", "svc"],
-  ["svc", "mysql"],
-  ["svc", "s3"],
-  ["svc", "pay"],
-  ["svc", "ins"],
-  ["svc", "fcm"],
-  ["sched", "pay"],
-  ["sched", "ins"],
-  ["sched", "etims"],
-  ["sched", "mysql"],
+  ["git", "ci"],
+  ["git", "scan"],
+  ["iac", "ci"],
+  ["ci", "ecr"],
+  ["ci", "argo"],
+  ["scan", "argo"],
+  ["ecr", "eks"],
+  ["argo", "eks"],
+  ["eks", "prom"],
+  ["eks", "graf"],
+  ["eks", "loki"],
+  ["eks", "cw"],
 ];
 
 const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
@@ -57,14 +57,14 @@ export function Architecture() {
     <section id="architecture" className="mx-auto max-w-6xl px-5 py-24">
       <SectionHead
         eyebrow="System design"
-        title="Inside Livia: how the pieces talk."
-        intro="A live map of the healthcare platform I work on every day. Hover any part to trace its connections."
+        title="How a change reaches production."
+        intro="A map of the delivery and observability pipeline I build and run. Hover any part to trace its connections."
       />
       <Reveal>
         <div className="card relative overflow-hidden p-3 sm:p-6">
           <div className="pointer-events-none absolute inset-0 grid-bg opacity-60" />
           <div className="relative -mx-3 overflow-x-auto px-3 sm:mx-0 sm:px-0">
-            <svg viewBox="0 0 1020 560" className="min-w-[760px]" role="img" aria-label="Livia platform architecture diagram">
+            <svg viewBox="0 0 1070 440" className="min-w-[760px]" role="img" aria-label="CI/CD and observability architecture diagram">
               <defs>
                 <linearGradient id="arch-grad" x1="0" x2="1">
                   <stop offset="0" stopColor="var(--accent)" />
@@ -81,10 +81,11 @@ export function Architecture() {
 
               {/* Column labels */}
               {[
-                [135, "CLIENTS"],
-                [410, "EDGE"],
-                [680, "SERVICES"],
-                [920, "DATA & INTEGRATIONS"],
+                [105, "SOURCE"],
+                [320, "PIPELINE"],
+                [535, "GITOPS"],
+                [750, "RUNTIME"],
+                [965, "OBSERVABILITY"],
               ].map(([x, t]) => (
                 <text key={t} x={x} y={22} textAnchor="middle" className="fill-[var(--muted)] font-mono text-[11px] tracking-[0.2em]">
                   {t}

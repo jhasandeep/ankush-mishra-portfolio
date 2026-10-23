@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Check, ExternalLink, FileCheck2, Lock, X } from "lucide-react";
-import { projects, type Project } from "@/data/portfolio";
+import { projects, type Project, featuredStats } from "@/data/portfolio";
 import { Reveal, SectionHead } from "./Reveal";
 import { TechIcon } from "./TechIcon";
 
@@ -227,8 +227,8 @@ export function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-5 py-24">
       <SectionHead
         eyebrow="Selected work"
-        title="Live products across healthcare, commerce, events and logistics."
-        intro="Real platforms in production. Open any project for details, or jump straight to the live site."
+        title="Pipelines, platforms and infrastructure I have built and run."
+        intro="Production infrastructure and delivery pipelines. Open any project for the details."
       />
 
       {/* Featured */}
@@ -272,12 +272,7 @@ export function Projects() {
             )}
           </div>
           <div className="grid grid-cols-2 gap-px border-t border-line bg-line md:grid-cols-4">
-            {[
-              ["48", "modules migrated off legacy PHP"],
-              ["7", "NestJS microservices"],
-              ["25", "scheduled jobs with distributed locks"],
-              ["50+", "admin modules built"],
-            ].map(([v, l]) => (
+            {featuredStats.map(([v, l]) => (
               <div key={l} className="bg-surface p-5 sm:p-6">
                 <p className="grad-text font-display text-3xl font-semibold">{v}</p>
                 <p className="mt-1 text-xs leading-snug text-muted">{l}</p>

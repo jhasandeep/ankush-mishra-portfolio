@@ -14,6 +14,11 @@ import {
   Clock,
   FileSpreadsheet,
   BookOpen,
+  Activity,
+  Gauge,
+  Workflow,
+  GitBranch,
+  Container,
   type LucideProps,
 } from "lucide-react";
 import type { ComponentType } from "react";
@@ -34,6 +39,11 @@ const icons: Record<string, ComponentType<LucideProps>> = {
   clock: Clock,
   "file-spreadsheet": FileSpreadsheet,
   "book-open": BookOpen,
+  activity: Activity,
+  gauge: Gauge,
+  workflow: Workflow,
+  "git-branch": GitBranch,
+  container: Container,
 };
 
 export function Icon({ name, ...props }: { name: string } & LucideProps) {

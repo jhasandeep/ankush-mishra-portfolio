@@ -19,7 +19,7 @@ function Counter({ to, suffix }: { to: number; suffix: string }) {
       return;
     }
     const unsub = mv.on("change", (v) => {
-      el.textContent = `${Math.round(v)}${suffix}`;
+      el.textContent = `${Number.isInteger(to) ? Math.round(v) : v.toFixed(1)}${suffix}`;
     });
     if (inView) animate(mv, to, { duration: 1.6, ease: "easeOut" });
     return unsub;

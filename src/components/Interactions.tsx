@@ -210,7 +210,7 @@ export function Intro() {
                 stroke="url(#intro-grad)"
                 strokeWidth="2"
               >
-                SJ
+                AM
               </text>
             </svg>
             <div className="h-px w-40 overflow-hidden bg-line">
@@ -221,7 +221,7 @@ export function Intro() {
                 transition={{ duration: 1.1, ease: "easeInOut" }}
               />
             </div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted">Sandeep Kumar Jha</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted">Ankush Mishra</p>
           </div>
         </motion.div>
       )}

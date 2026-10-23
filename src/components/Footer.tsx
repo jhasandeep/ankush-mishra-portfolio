@@ -14,15 +14,17 @@ export function Footer() {
               {profile.role} · {profile.location}
             </p>
             <div className="mt-5 flex gap-3">
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
-              >
-                <GithubIcon className="h-[18px] w-[18px]" />
-              </a>
+              {profile.github && (
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="grid h-10 w-10 place-items-center rounded-xl border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+                >
+                  <GithubIcon className="h-[18px] w-[18px]" />
+                </a>
+              )}
               <a
                 href={profile.linkedin}
                 target="_blank"
@@ -50,7 +52,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <Signature text="SANDEEP" />
+        <Signature text="ANKUSH" />
 
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-sm text-muted sm:flex-row">
           <p>&copy; {profile.name}. Built with Next.js, Tailwind CSS and Framer Motion.</p>

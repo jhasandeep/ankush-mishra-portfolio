@@ -26,14 +26,14 @@ export function Engineering() {
     <section id="engineering" className="border-y border-line bg-soft">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <SectionHead
-          eyebrow="Engineering depth"
-          title="Shipping is half the job. Proving it works is the other half."
-          intro="Beyond features, I build the tooling that makes large migrations and permission-heavy systems safe to release. Pick one to see it run."
+          eyebrow="DevOps in practice"
+          title="Automate it, ship it, watch it run."
+          intro="The pipelines, platforms and guardrails I build to make releases fast and production dependable. Pick one to see it run."
         />
 
         <Reveal>
           <div ref={ref} className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-            <ul className="grid gap-2" role="tablist" aria-label="Engineering tools">
+            <ul className="grid gap-2" role="tablist" aria-label="DevOps practices">
               {engineering.map((e, i) => {
                 const on = i === active;
                 return (
@@ -79,7 +79,7 @@ export function Engineering() {
                 <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
                 <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-                <span className="ml-3 font-mono text-[11px] text-white/40">livia-platform — bash</span>
+                <span className="ml-3 font-mono text-[11px] text-white/40">devops — bash</span>
               </div>
               <div className="min-h-[300px] p-6 font-mono text-[13px] leading-relaxed sm:text-sm">
                 <AnimatePresence mode="wait">

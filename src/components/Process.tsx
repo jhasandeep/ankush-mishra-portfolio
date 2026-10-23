@@ -10,16 +10,16 @@ const icons = [Search, Compass, Code2, Rocket];
 
 const steps = {
   freelance: [
-    { title: "Understand", text: "A short call to pin down goals, users, scope and timeline. You get a clear written plan." },
-    { title: "Design the system", text: "Pick the stack, data model and integrations so the product can grow without a rewrite." },
-    { title: "Build and test", text: "Frequent demos on a staging link, with automated tests covering the critical flows." },
-    { title: "Ship and support", text: "CI/CD, SSL and monitoring set up, plus handover docs, so launch day is uneventful." },
+    { title: "Assess", text: "A short call and a look at your current infrastructure, pipelines and cloud bill to pin down goals and risks." },
+    { title: "Design", text: "Choose the architecture, tooling and environments so the setup can scale without a rewrite." },
+    { title: "Automate", text: "Infrastructure as Code, CI/CD and monitoring built in small steps, with demos along the way." },
+    { title: "Hand over", text: "Runbooks, dashboards and documentation so your team can operate everything confidently." },
   ],
   company: [
-    { title: "Learn the codebase", text: "Map the domain, contracts and edge cases first, using AI-assisted analysis to get there quickly." },
-    { title: "Plan the change", text: "Write migration blueprints and API docs so reviewers and stakeholders agree on the approach." },
-    { title: "Build with guardrails", text: "Typed, validated code with E2E, parity and RBAC checks so regressions surface early." },
-    { title: "Release and own it", text: "Ship through CI/CD, watch production, and fix root causes rather than symptoms." },
+    { title: "Understand the system", text: "Map the services, environments, traffic and failure modes before changing anything." },
+    { title: "Codify it", text: "Move infrastructure and deployments into Terraform, Helm and Git so every change is reviewed." },
+    { title: "Automate delivery", text: "CI/CD with security scanning and GitOps so releases are fast, repeatable and reversible." },
+    { title: "Operate and improve", text: "Monitor, respond to incidents, find root causes and keep tuning cost and performance." },
   ],
 };
 

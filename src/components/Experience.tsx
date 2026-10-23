@@ -16,7 +16,7 @@ export function Experience() {
     <section id="experience" className="mx-auto max-w-6xl px-5 py-24">
       <SectionHead
         eyebrow="Experience"
-        title="From parcel dashboards to a multi-portal healthcare platform."
+        title="From application support to running production cloud platforms."
       />
       <div ref={lineRef} className="relative">
         <div className="absolute bottom-2 left-[11px] top-2 w-px bg-line" />

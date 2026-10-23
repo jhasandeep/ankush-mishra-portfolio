@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useInView } from "framer-motion";
 import { GraduationCap, MapPin, Sparkles, Briefcase } from "lucide-react";
-import { about, aiWorkflow, profile } from "@/data/portfolio";
+import { about, practices, profile } from "@/data/portfolio";
 import { Reveal, SectionHead } from "./Reveal";
 import { TechIcon } from "./TechIcon";
 
@@ -94,10 +94,10 @@ function DelhiClock() {
 }
 
 const script = [
-  { cmd: "whoami", out: "sandeep-kumar-jha · senior full stack developer" },
-  { cmd: "cat stack.txt", out: "next.js · react · nestjs · typescript · mysql · mongodb" },
-  { cmd: "uptime", out: "4+ years shipping web, mobile, apis and infra" },
-  { cmd: "echo $STATUS", out: "open to full-time roles and freelance projects" },
+  { cmd: "whoami", out: "ankush-mishra · senior devops engineer" },
+  { cmd: "cat stack.txt", out: "aws · kubernetes · terraform · argocd · jenkins · grafana" },
+  { cmd: "uptime", out: "4.5 years automating cloud infra and ci/cd" },
+  { cmd: "echo $STATUS", out: "open to senior devops roles and consulting" },
 ];
 
 function TypingTerminal() {
@@ -121,7 +121,7 @@ function TypingTerminal() {
         <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-        <span className="ml-3 font-mono text-[11px] text-white/40">~/sandeep — zsh</span>
+        <span className="ml-3 font-mono text-[11px] text-white/40">~/ankush — zsh</span>
       </div>
       <div className="flex-1 space-y-2 p-5 font-mono text-[13px] leading-relaxed">
         {script.map((l, i) => {
@@ -165,7 +165,7 @@ export function About() {
               ))}
             </div>
             <div className="flex flex-wrap gap-2">
-              {["Next.js", "React", "NestJS", "TypeScript", "MySQL", "MongoDB", "React Native", "Docker"].map((t) => (
+              {["AWS", "Kubernetes", "Terraform", "Docker", "Jenkins", "ArgoCD", "Prometheus", "Grafana"].map((t) => (
                 <span
                   key={t}
                   className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface2 px-3 py-1.5 text-xs"
@@ -188,9 +188,9 @@ export function About() {
               <Briefcase size={13} className="text-accent" /> Currently building
             </p>
             <div className="relative">
-              <p className="font-display text-xl font-semibold leading-tight">Livia HMIS</p>
+              <p className="font-display text-xl font-semibold leading-tight">Horocosmo on AWS</p>
               <p className="mt-1 text-xs leading-relaxed text-muted">
-                7 microservices · 3 mobile apps · @ TeamArcs Technologies
+                CI/CD · cost optimization · @ Astro Arun Pandit
               </p>
               <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface2">
                 <div className="h-full w-3/4 animate-pulse rounded-full bg-gradient-to-r from-accent to-accent2" />
@@ -207,20 +207,20 @@ export function About() {
           <div className="spot card flex h-full flex-col justify-between gap-5 p-6">
             <div className="flex items-center justify-between">
               <p className="flex items-center gap-2 font-display text-lg font-semibold">
-                <Sparkles size={18} className="text-accent" /> AI-assisted workflow
+                <Sparkles size={18} className="text-accent" /> How I work
               </p>
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-xl border border-line bg-surface2">
-                  <TechIcon name="Cursor" size={18} />
+                  <TechIcon name="Terraform" size={18} />
                 </span>
                 <span className="grid h-9 w-9 place-items-center rounded-xl border border-line bg-surface2">
-                  <TechIcon name="Claude" size={18} />
+                  <TechIcon name="Kubernetes" size={18} />
                 </span>
               </div>
             </div>
             <p className="text-sm text-muted">{about.paragraphs[2]}</p>
             <div className="flex flex-wrap gap-2">
-              {aiWorkflow.map((a) => (
+              {practices.map((a) => (
                 <span key={a} className="rounded-full bg-accent/10 px-3 py-1 text-xs text-accent">
                   {a}
                 </span>

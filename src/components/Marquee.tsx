@@ -1,48 +1,42 @@
 import { TechIcon } from "./TechIcon";
 
 const items = [
-  "Next.js",
-  "React",
-  "NestJS",
-  "TypeScript",
-  "Node.js",
-  "MySQL",
-  "MongoDB",
-  "React Native",
-  "GraphQL",
-  "Docker",
-  "Kubernetes",
-  "Jenkins",
   "AWS",
-  "Playwright",
-  "Tailwind CSS",
-  "Django",
+  "Kubernetes",
+  "Terraform",
+  "Docker",
+  "ArgoCD",
+  "Jenkins",
+  "GitHub Actions",
+  "Helm",
+  "Prometheus",
+  "Grafana",
+  "Python",
+  "Azure",
 ];
 
 const items2 = [
-  "Redux Toolkit",
-  "GraphQL",
-  "Hasura",
-  "Kubernetes",
-  "Helm",
-  "Nginx",
-  "Firebase",
-  "Postman",
-  "Python",
-  "Express",
-  "Material UI",
-  "Radix UI",
+  "Ansible",
+  "Loki",
+  "ELK Stack",
+  "Traefik",
+  "Cloudflare",
+  "SonarQube",
+  "Trivy",
+  "Redis",
   "Linux",
-  "Swagger",
+  "Bash",
+  "Git",
+  "GCP",
 ];
 
-const clients = ["Wow! Momo", "Baskin Robbins", "The Belgian Waffle Co.", "Taco Bell"];
+const clients = ["Livia Health", "Astro Arun Pandit", "HCL Technologies", "Stanley Black & Decker"];
 
 export function Marquee() {
   return (
     <section aria-label="Clients and technologies" className="border-t border-line py-10">
       <p className="mb-6 text-center font-mono text-[11px] uppercase tracking-[0.25em] text-muted">
-        Delivered for brands like{" "}
+        Worked with teams and clients including{" "}
         {clients.map((c, i) => (
           <span key={c} className="text-fg">
             {c}

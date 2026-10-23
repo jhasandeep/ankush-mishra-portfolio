@@ -11,12 +11,12 @@ import { Magnetic } from "./Interactions";
 import { GithubIcon, LinkedinIcon } from "./Icon";
 import { TechIcon } from "./TechIcon";
 
-const stackChips = ["Next.js 15", "React 19", "NestJS", "TypeScript", "MySQL", "React Native", "Docker", "Playwright"];
+const stackChips = ["AWS", "Kubernetes", "Terraform", "ArgoCD", "Jenkins", "Docker", "Grafana", "Python"];
 
 const floaters = [
-  { value: "48", label: "modules migrated", className: "-top-6 right-6", delay: 0 },
-  { value: "57", label: "E2E flows", className: "-bottom-10 right-4", delay: 1.2 },
-  { value: "99.9%", label: "uptime managed", className: "-bottom-10 left-4", delay: 2.2 },
+  { value: "4.5+", label: "years in DevOps", className: "-top-6 right-6", delay: 0 },
+  { value: "20-30%", label: "cloud spend cut", className: "-bottom-10 right-4", delay: 1.2 },
+  { value: "~40%", label: "faster deployments", className: "-bottom-10 left-4", delay: 2.2 },
 ];
 
 export function Hero() {
@@ -94,9 +94,11 @@ export function Hero() {
             <span className="inline-flex items-center gap-1.5">
               <MapPin size={15} /> {profile.location}
             </span>
-            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-fg">
-              <GithubIcon className="h-4 w-4" /> GitHub
-            </a>
+            {profile.github && (
+              <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-fg">
+                <GithubIcon className="h-4 w-4" /> GitHub
+              </a>
+            )}
             <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 hover:text-fg">
               <LinkedinIcon className="h-4 w-4" /> LinkedIn
             </a>
@@ -118,7 +120,7 @@ export function Hero() {
               <div className="relative mr-2 h-16 w-16 shrink-0">
                 <Orbit />
                 <div className="relative grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-accent to-accent2 font-display text-2xl font-bold text-ink shadow-lg shadow-accent/30">
-                  SJ
+                  AM
                 </div>
               </div>
               <div>
@@ -128,11 +130,11 @@ export function Hero() {
             </div>
 
             <div className="relative mt-6 rounded-xl border border-line bg-soft p-4 font-mono text-[13px] leading-6 text-muted">
-              <p><span className="text-accent">const</span> sandeep = {"{"}</p>
-              <p className="pl-4">experience: <span className="text-accent2">&quot;4+ years&quot;</span>,</p>
-              <p className="pl-4">focus: <span className="text-accent2">&quot;full stack&quot;</span>,</p>
-              <p className="pl-4">now: <span className="text-accent2">&quot;Livia HMIS @ TeamArcs&quot;</span>,</p>
-              <p className="pl-4">openTo: [<span className="text-accent2">&quot;full-time&quot;</span>, <span className="text-accent2">&quot;freelance&quot;</span>],</p>
+              <p><span className="text-accent">const</span> ankush = {"{"}</p>
+              <p className="pl-4">experience: <span className="text-accent2">&quot;4.5 years&quot;</span>,</p>
+              <p className="pl-4">focus: <span className="text-accent2">&quot;devops &amp; cloud&quot;</span>,</p>
+              <p className="pl-4">now: <span className="text-accent2">&quot;Horocosmo on AWS&quot;</span>,</p>
+              <p className="pl-4">openTo: [<span className="text-accent2">&quot;full-time&quot;</span>, <span className="text-accent2">&quot;consulting&quot;</span>],</p>
               <p>{"}"}</p>
             </div>
 

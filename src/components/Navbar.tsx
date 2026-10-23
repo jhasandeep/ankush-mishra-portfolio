@@ -50,9 +50,9 @@ export function Navbar() {
         <nav className="flex h-14 items-center justify-between gap-4 px-4">
           <a href="#top" className="flex items-center gap-2 font-display text-base font-semibold tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent2 text-xs font-bold text-ink">
-              SJ
+              AM
             </span>
-            <span className="hidden sm:inline">Sandeep Jha</span>
+            <span className="hidden sm:inline">Ankush Mishra</span>
           </a>
 
           <ul className="hidden items-center gap-1 lg:flex">
